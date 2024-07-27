@@ -1,3 +1,6 @@
+body{
+    background-color: #E3D4D0;
+}
 .carousel-inner img {
     width: 100%;
     height: 400px; /* Altura fija del carrusel */
@@ -7,4 +10,8 @@
 .titulo{
     text-align: center;
     font-family: "Century Gothic", CenturyGothic, AppleGothic
+}
+
+nav{
+    background-color: #DABEB6;
 }

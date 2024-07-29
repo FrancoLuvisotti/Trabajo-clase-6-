@@ -16,3 +16,20 @@ body{
 .color{
     background-color: #DABEB6;
 }
+
+.card{
+    width: 18rem;  
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+.card img{
+    height: 250px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: space-between;
+}

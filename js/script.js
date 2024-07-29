@@ -37,8 +37,7 @@ function validateName(name) {
         Mínimo de 2 caracteres
         Máximo de 15 caracteres
         Puede contener letras, espacios y puede llevar acentos.       
-    */
-           
+    */   
     return regex.test(name)
 }
 

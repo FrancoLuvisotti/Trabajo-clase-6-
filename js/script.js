@@ -41,6 +41,18 @@ function validateName(name) {
     return regex.test(name)
 }
 
+function validateTelefono(telefono) {
+    const regex = /^[0-9]{10,20}$/
+    
+    /* 
+        Desglose de la Expresión Regular
+        Mínimo de 10 caracteres
+        Máximo de 20 caracteres
+    
+    */   
+    return regex.test(telefono)
+}
+
 function checkForm() {
     const NAME = document.getElementById("formName")
     const SURNAME = document.getElementById("formSurname")
@@ -65,10 +77,10 @@ function checkForm() {
     if (!validateEmail(EMAIL.value.trim()) && EMAIL.required)
         ERROR = ERROR.concat("\n* El campo 'Correo electrónico' debe tener un email válido.")
 
-    if (!validateDate(DOMICILIO.value) && DOMICILIO.required)
+    if (!validateDomicilio(DOMICILIO.value) && DOMICILIO.required)
         ERROR = ERROR.concat("\n* El campo 'Domicilio' necesita un domicilio válido.")
     
-    if (!validateDate(TELEFONO.value) && TELEFONO.required)
+    if (!validateTelefono(TELEFONO.value) && TELEFONO.required)
         ERROR = ERROR.concat("\n* El campo 'Telefono' necesita un telefono válido.")
 
     if (ERROR === "¡UPS! Parece que los siguientes campos no tienen información válida:\n")

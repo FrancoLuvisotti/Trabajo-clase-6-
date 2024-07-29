@@ -45,8 +45,8 @@ function checkForm() {
     const NAME = document.getElementById("formName")
     const SURNAME = document.getElementById("formSurname")
     const EMAIL = document.getElementById("formEmail")
-    const domicilio = document.getElementById("formDomicilio")
-    const telefono = document.getElementById("formTelefono")
+    const DOMICILIO = document.getElementById("formDomicilio")
+    const TELEFONO = document.getElementById("formTelefono")
 
     //  Intencionalmente evito un early return para avisar al usuario de todos
     //  los errores al mismo tiempo en lugar del primero que se encuentre.
@@ -65,11 +65,11 @@ function checkForm() {
     if (!validateEmail(EMAIL.value.trim()) && EMAIL.required)
         ERROR = ERROR.concat("\n* El campo 'Correo electrónico' debe tener un email válido.")
 
-    if (!validateDate(domicilio.value) && domicilio.required)
-        ERROR = ERROR.concat("\n* El campo 'Fecha de nacimiento' necesita una fecha en el pasado válida.")
+    if (!validateDate(DOMICILIO.value) && DOMICILIO.required)
+        ERROR = ERROR.concat("\n* El campo 'Domicilio' necesita un domicilio válido.")
     
-    if (telefono.value === "" && telefono.required)
-        ERROR = ERROR.concat("\n* El campo 'País de residencia' necesita algún país indicado.")
+    if (!validateDate(TELEFONO.value) && TELEFONO.required)
+        ERROR = ERROR.concat("\n* El campo 'Telefono' necesita un telefono válido.")
 
     if (ERROR === "¡UPS! Parece que los siguientes campos no tienen información válida:\n")
     {
